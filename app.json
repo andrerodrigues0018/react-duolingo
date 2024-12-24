@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "duo-dre",
-    "slug": "duo-dre",
+    "name": "react-duolingo",
+    "slug": "react-duolingo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "experiments": {
-      "baseUrl": "/expo-gh-pages"
+      "baseUrl": "/react-duolingo"
     },
     "ios": {
       "supportsTablet": true
