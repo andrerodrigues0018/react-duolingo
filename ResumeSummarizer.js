@@ -52,7 +52,36 @@ const ResumeSummarizer = () => {
       {loading && <ActivityIndicator size="large" color="#0000ff" />}
       {markdown && (
         <ScrollView style={styles.markdownContainer}>
-          <Text style={styles.markdownText}>{markdown}</Text>
+          <Text style={styles.markdownText}>Nome: {markdown.nome}</Text>
+          <Text style={styles.markdownText}>Email: {markdown.email} | TEL: {markdown.telefone} </Text>
+          <Text style={styles.markdownText}>Objetivo: {markdown.posicao} </Text>
+          <Text style={styles.markdownText}>
+            Educação:
+            <hr/>
+            {markdown.educacao.map((educacao, index) => (
+              <div key={index}>
+                <Text>Curso: {educacao.curso}</Text><br/>
+                <Text>data: {educacao.data}</Text><br/>
+                <Text>Instituição: {educacao.instituicao}</Text>             
+                <hr/>
+              </div>
+
+            ))}
+          </Text>
+          <Text style={styles.markdownText}>
+            Experiencia
+            <hr/>
+            {markdown.experiencias.map((experiencia, index) => (
+              <div key={index}>
+                <Text>empresa: {experiencia.empresa}</Text><br/>
+                <Text>local: {experiencia.local}</Text><br/>
+                <Text>periodo: {experiencia.periodo}</Text><br/>
+                <Text>titulo: {experiencia.titulo}</Text><br/>
+                <hr/>
+
+              </div>
+            ))}
+          </Text>
         </ScrollView>
       )}
     </View>
